@@ -20,4 +20,10 @@ public class InputPageController {
         return new StringModel("All OK");
     }
 
+
+    @GetMapping("/api/dido")
+    @ResponseBody
+    public StringModel returnDataFile(){
+        return new StringModel(IOFileService.readFromFile());
+    }
 }
